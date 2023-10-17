@@ -1,10 +1,13 @@
 # Java
 
-![Java](github/java.png)
+<p align="center">
+<img alt="Java" height="200" src="github/java.png" width="200"/>
+</p>
+
 
 - Oriented Programing Language
 - Multiplatform (Write only, run anywhere)
-- Compiled/Interpreted language
+- Compiled/Interpreted language`
 
 ## JVM
 

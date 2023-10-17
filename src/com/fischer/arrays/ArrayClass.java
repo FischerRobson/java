@@ -24,7 +24,6 @@ public class ArrayClass {
         Arrays.fill(intArray, 5); // fill all positions with the value
 
         int[] newArray = new int[10];
-        int[] otherArray = Arrays.copyOf(newArray, newArray.length); // copies by value, not reference
-
+        int[] otherArray = Arrays.copyOf(newArray, newArray.length); // copies by value, not references
     }
 }
