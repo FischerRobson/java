@@ -6,12 +6,16 @@ import java.util.List;
 
 public class Lambda {
 
-
     // Anonymous functions
     // More functional and optimized code
     // Iterate, filter and extract data from collections
     // lambda operator: args -> action
-    // Whenever the param is a Functional Interface, you can use lambda
+    // Whenever the param is a Functional Interface
+    // (an interface with only one method),
+    // you can use lambda
+
+    // The concept is like instead you pass an object that implements an interface,
+    // you pass directly the method implementation
 
     public static void main(String[] args) {
 
