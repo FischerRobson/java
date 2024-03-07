@@ -7,7 +7,7 @@
 
 - Oriented Programing Language
 - Multiplatform (Write only, run anywhere)
-- Compiled/Interpreted language`
+- Compiled/Interpreted language
 
 ## JVM
 
@@ -55,3 +55,37 @@ java [Class].java
 | chat    | 2 byte  | Stores a single character/letter or ASCII values |
 
 
+## Arrays
+
+Java arrays are immutable, the variable store the reference of array.
+So, for copy the values and not the reference use `Arrays.copyOf()`.
+
+This ll thrown an `ArrayIndexOutOfBoundsException`.
+
+```java
+int[] array = {1, 2, 3, 4, 5};
+array[5] = 55;
+```
+
+Instead of use `[]` its also possible use `...`, in this case you can pass a single
+instance of the required type, not an array.
+
+```java
+void printText(String[] texts) {
+    for (String s: texts) {
+        System.out.println(s);
+    }
+}
+
+printText("World"); // There`s an error!
+```
+
+```java
+void printText(String... texts) {
+    for (String s: texts) {
+        System.out.println(s);
+    }
+}
+
+printText("World"); // Works fine!
+```
