@@ -89,3 +89,11 @@ void printText(String... texts) {
 
 printText("World"); // Works fine!
 ```
+
+### Generics
+
+```java
+class GenericClass<T> {
+    public T field;
+}
+```
