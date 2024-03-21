@@ -3,7 +3,7 @@ package com.fischer.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team<T> {
+public class Team<T extends Player> {
     private String teamName;
     private List<T> teamMembers = new ArrayList<>();
     private int totalWins = 0;
@@ -14,9 +14,9 @@ public class Team<T> {
         this.teamName = teamName;
     }
 
-    public void addTeamPlayer(T player) {
-        if (!teamMembers.contains(player)) {
-            teamMembers.add(player);
+    public void addTeamPlayer(T t) {
+        if (!teamMembers.contains(t)) {
+            teamMembers.add(t);
         }
     }
 

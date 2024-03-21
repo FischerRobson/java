@@ -92,8 +92,49 @@ printText("World"); // Works fine!
 
 ### Generics
 
+Generics in Java are a powerful feature that enable types (classes and interfaces) to 
+be parameters when defining classes, interfaces, and methods.
+Much like the more familiar formal parameters used in method declarations,
+type parameters provide a way for you to re-use the same code with different inputs.
+The main benefits of generics include stronger type checks at compile time,
+elimination of casts, and the ability to implement generic algorithms.
+
 ```java
 class GenericClass<T> {
     public T field;
 }
 ```
+
+Parameterized type T must be a Player, or a subtype of Player:
+
+```java
+public class Team<T extends Player> {}
+```
+
+### Comparable
+
+The Comparable interface in Java is a mechanism for defining the natural ordering of objects of a class. 
+When a class implements the Comparable interface, it agrees to implement the compareTo method,
+which compares the current object with another object of the same type. The compareTo method returns an
+integer value: negative if the current object is less than the specified object, zero if they are equal, 
+and positive if the current object is greater than the specified object. This interface is part of
+the java.lang package, which means it's automatically available and does not need to be imported.
+
+```java
+Integer five = 5;
+Integer[] others = {0, 5, 10, -5};
+
+for(Integer i: others) {
+    five.compareTo(i);    
+}
+```
+
+### Comparator
+
+The Comparator interface in Java is used to define a custom ordering for objects of a class that may not have a
+natural ordering, or when you need an alternative ordering to the one defined by a class's
+Comparable implementation. Unlike Comparable, which is a method implemented within the class of
+the objects to be compared, Comparator is external to the objects being compared. This approach provides
+flexibility, allowing multiple different comparison strategies for the same class.
+
+![img.png](img.png)
