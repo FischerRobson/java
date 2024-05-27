@@ -99,6 +99,7 @@ type parameters provide a way for you to re-use the same code with different inp
 The main benefits of generics include stronger type checks at compile time,
 elimination of casts, and the ability to implement generic algorithms.
 
+
 ```java
 class GenericClass<T> {
     public T field;
@@ -110,6 +111,30 @@ Parameterized type T must be a Player, or a subtype of Player:
 ```java
 public class Team<T extends Player> {}
 ```
+
+
+Generics class as reference type cause an error, like:
+
+```java
+class LPAStudent extends Student { }
+
+List<Studend> students =new ArrayList<>();
+
+List<LPAStudend> lpaStudents = new ArrayList<>();
+
+printList(List<Student> list) {
+
+}
+
+printList(students);
+
+printList(lpaStudents); // show error
+```
+
+So, you can use `printList(List list) {}`
+
+When declare a variable or method parameter with `List<Student>`, we cant assign a list of Student subtypes.
+Only List subtypes with students can be assigned.
 
 ### Comparable
 
@@ -136,5 +161,14 @@ natural ordering, or when you need an alternative ordering to the one defined by
 Comparable implementation. Unlike Comparable, which is a method implemented within the class of
 the objects to be compared, Comparator is external to the objects being compared. This approach provides
 flexibility, allowing multiple different comparison strategies for the same class.
+
+#### Tips
+
+`? extends T`: Accepts T or its subclasses. 
+It's used for reading from a structure because we can guarantee the type is at least T or more specific.
+
+`? super T`: Accepts T or its superclasses. 
+It's more about writing to a structure because you can put a T (or a subtype of T) into 
+something that accepts "T or a supertype of T" safely.
 
 ![img.png](img.png)
